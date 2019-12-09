@@ -1,0 +1,80 @@
+/* create_time: 2019/7/11 15:27 */
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.post-content{
+    padding: 10px;
+}
+.post-info-group{
+    border-bottom: 1px solid #e6e6e6;
+    margin-top: 25px;
+    color: #8c8c8c;
+}
+.post-info-group span{
+    margin-right: 20px;
+}
+.lg-container{
+    border: 1px solid #e6e6e6;
+    padding: 10px;
+}
+.comment-group h3{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e8e8e8;
+    padding-bottom: 10px;
+}
+.post-content img{
+    max-width: 100%;
+}
+.comment-group{
+    border: 1px solid #e8e8e8;
+    padding: 10px;
+}
+.add-comment-group{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+}
+.comment-group li{
+    overflow: hidden;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #e8e8e8;
+}
+.avatar-group{
+    float: left;
+}
+.avatar-group img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.comment-content{
+    float: left;
+    margin-left: 10px;
+}
+.author-info span{
+    margin-right: 15px;
+}
+.avatar-info img{
+    width: 100px;
+    height: 100px;
+    margin-left: 29px;
+}
+.author-info-group{
+    margin-left: 50px;
+    border: 1px solid #e8e8e8;
+    padding: 20px;
+}
+.avatar-info{
+    margin: 0 auto;
+}
+.info-tag a{
+    margin: 10px 30% 10px;
+}
+.author-username{
+    text-align: center;
+    margin: 10px 0 10px;
+}

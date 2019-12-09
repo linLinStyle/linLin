@@ -1,0 +1,34 @@
+{% extends 'front/front_signbase.html' %}
+
+{% block title %}
+    登录知了课堂论坛
+{% endblock %}
+
+{% block head %}
+    <script src="{{ static('front/js/front_signin.js') }}"></script>
+{% endblock %}
+
+{% block h2_title %}
+    知了账号登录
+{% endblock %}
+
+{% block signbox %}
+    <div class="form-group">
+        <input type="text" class="form-control" name="telephone" placeholder="手机号码">
+    </div>
+    <div class="form-group">
+        <input type="password" class="form-control" name="password" placeholder="密码">
+    </div>
+    <div class="check-box">
+        <label>
+            <input type="checkbox" name="remember" value="1">记住我
+        </label>
+    </div>
+    <div class="form-group">
+        <button id="submit-btn" class="btn btn-warning btn-block">立即登录</button>
+    </div>
+    <div class="form-group">
+        <a class="signup-link" href="{{ url_for('front.signup') }}">没有账号？立即注册</a>
+        <a class="resetpwd-link" href="#" style="float: right">找回密码</a>
+    </div>
+{% endblock %}

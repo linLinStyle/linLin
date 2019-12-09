@@ -1,0 +1,14 @@
+/* create_time: 2019/7/8 15:26 */
+.main-container{
+    width: 990px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.lg-container{
+    width: 730px;
+    float: left;
+}
+.sm-container{
+    width: 250px;
+    float: right;
+}

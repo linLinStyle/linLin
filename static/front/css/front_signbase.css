@@ -1,0 +1,36 @@
+/* create_time: 2019/7/8 11:22 */
+/* create_time: 2019/7/7 9:27 */
+body{
+    background: #f3f3f3;
+}
+.outter-box{
+    width: 854px;
+    margin: 0 auto;
+    background: #fff;
+    overflow: hidden;
+}
+.logo-box{
+    text-align: center;
+    padding-top: 40px;
+}
+.logo-box img{
+    width: 60px;
+    height: 60px;
+}
+.page-title{
+    text-align: center;
+}
+.sign-box{
+    width: 300px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.captcha-addon{
+    padding: 0;
+    overflow: hidden;
+}
+.captcha-img{
+    width: 94px;
+    height: 32px;
+    cursor: pointer;
+}

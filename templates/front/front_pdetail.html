@@ -1,0 +1,68 @@
+{% extends 'front/front_base.html' %}
+{% from 'common/_macros.html' import static %}
+
+{% block title %}
+    {{ post.title }}
+{% endblock %}
+
+{% block head %}
+    <script src="{{ static('ueditor/ueditor.config.js') }}"></script>
+    <script src="{{ static('ueditor/ueditor.all.min.js') }}"></script>
+    <script src="{{ static('front/js/front_pdetail.js') }}"></script>
+    <link rel="stylesheet" href="{{ static('front/css/front_postdetail.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="lg-container">
+        <h2>{{ post.title }}</h2>
+        <p class="post-info-group">
+            <span>发表时间:{{ post.create_time|handle_time }}</span>
+            <span>作者:{{ post.author.username }}</span>
+            <span>所属模块:{{ post.board.name }}</span>
+            <span>阅读数:0</span>
+            <span>评论数:0</span>
+        </p>
+        <article id="post-id-tag" data-id="{{ post.id }}" class="post-content">
+            {{ post.content|safe }}
+        </article>
+        <div class="comment-group">
+            <h3>评论列表</h3>
+            <ul class="comment-list-group">
+                {% for comment in post.comments %}
+                    <li>
+                        <div class="avatar-group">
+                            <img src="{{ comment.author.avatar or static('common/images/logo.png') }}" alt="">
+                        </div>
+                        <div class="comment-content">
+                            <p class="author-info">
+                                <span style="color:#ff8b3d">{{ comment.author.username }}</span>
+                                <span style="color: #8c8c8c">发表于{{ comment.create_time|handle_time }}</span>
+                            </p>
+                            <p class="comment-text">
+                                {{ comment.content|safe }}
+                            </p>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="add-comment-group">
+            <h4>发表评论</h4>
+            <script style="height:100px" id="editor" type="text/plain"></script>
+            <div style="margin-top: 10px;text-align: right">
+                <button class="btn btn-primary" id="comment-btn">发表评论</button>
+            </div>
+        </div>
+    </div>
+    <div class="sm-container">
+        <div class="author-info-group">
+            <div class="avatar-info">
+                <img src="{{ post.author.avatar or static('common/images/logo.png') }}" alt="">
+                <div class="author-username">
+                    {{ post.author.username }}
+                </div>
+            </div>
+            <div class="info-tag"><a href="#">Ta的主页</a></div>
+        </div>
+    </div>
+{% endblock %}
